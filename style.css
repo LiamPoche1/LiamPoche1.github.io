@@ -2,7 +2,7 @@ body {
     background: rgb(0, 13, 255);
     color: rgb(0, 0, 0);
     padding: 10px;
-    font-family: Arial, sans-serif;
+    font-family: Arial ,sans-serif;
 }
 
 #all-contents {
@@ -12,11 +12,11 @@ body {
 
 /* navigation menu */
 nav {
-    background: rgb(255, 238, 0);
+    background: rgb(255, 180, 0);
     margin: 0 auto;
     display: flex;
     padding: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     justify-content: space-between;
 }
 
@@ -49,7 +49,7 @@ a {
 main {
     background: rgb(245, 238, 219);
     display: flex;
-    margin-top: 20px;
+    margin-top: 150px;
 }
 
 .sidebar {
@@ -63,16 +63,91 @@ main {
 
 .content {
     flex: 1;
-    padding: 15px;
+    padding: 20px;
 }
 
 /* interests section styles */
 #interests {
-    border: 4px silver ridge;
+    border: 4px rgb(255, 180, 0) ridge;
     padding: 8px;
     margin-top: 20px;
 }
 
 h2, h3 {
     margin: 0px;
+}
+/* Portfolio styles */
+.content h1 {
+  color: black;
+}
+
+#portfolio {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+#portfolio li {
+  background: #ff9100;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  color: White
+}
+
+#portfolio li:hover {
+  background: rgb(0, 13, 255);
+}
+
+#portfolio a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+}
+/* responsive web design */
+@media screen and (min-width: 120px) and (max-width: 1080px) {
+  main {
+    height: 100ch;
+    zoom: 1.5;
+    display: grid;
+  }
+
+  h1 {
+    font-size: 44px;
+  }
+
+  h2 {
+    font-size: 42px;
+  }
+
+  h3 {
+    font-size: 36px;
+  }
+
+  #all-contents {
+    height: 100ch;
+    margin: none;
+  }
+
+  a {
+    font-size: 42px;
+  }
+
+  .sidebar {
+    margin-right: 0px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .sidebar-img {
+    width: 100%;
+  }
+
+  p,
+  li {
+    font-size: 24px;
+  }
+
+  .content {
+    align-content: center;
+    justify-content: center;
+  }
 }
