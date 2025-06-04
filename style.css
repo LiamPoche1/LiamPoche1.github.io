@@ -1,80 +1,83 @@
-body{
-    background: #ffffff url(https://d1w82usnq70pt2.cloudfront.net/wp-content/uploads/2020/06/17c1ca2ad2aecc6c3584c45c555b780f.jpg) center center/cover no-repeat;
-    color: rgb(0, 0, 0);
-    padding: 10px;
-    font-family: Arial ,sans-serif;
+body {
+  background: #000000
+    url(https://d1w82usnq70pt2.cloudfront.net/wp-content/uploads/2020/06/17c1ca2ad2aecc6c3584c45c555b780f.jpg)
+    center center/cover no-repeat;
+  color: rgb(0, 0, 0);
+  padding: 100px;
 }
 
 #all-contents {
-    max-width: 800px;
-    margin: auto;
+  max-width: 800px;
+  margin: auto;
+  font-family: "Times New Roman", Times, serif;
 }
 
 /* navigation menu */
 nav {
-    background: rgb(255, 180, 0);
-    margin: 0 auto;
-    display: flex;
-    padding: 10px;
-    margin-bottom: 10px;
-    justify-content: space-between;
+  background: rgb(255, 180, 0);
+  margin: 0 auto;
+  display: flex;
+  padding: 10px;
+  margin-bottom: 10px;
+  justify-content: space-between;
 }
 
 h1 {
-    display: flex;
-    align-items: center;
-    color: rgb(0, 0, 0);
-    flex: 1;
-    margin: 0;
+  display: flex;
+  align-items: center;
+  color: rgb(0, 0, 0);
+  flex: 1;
+  margin: 0;
 }
 
 #nav-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
 }
 
 .nav-li {
-    display: inline-block;
-    padding: 0 10px;
+  display: inline-block;
+  padding: 0 10px;
 }
 
 a {
-    text-decoration: none;
-    color: #007bff;
+  text-decoration: none;
+  color: #007bff;
 }
 
 /* main container area beneath menu */
 main {
-    background: rgb(245, 238, 219);
-    display: flex;
-    margin-top: 150px;
+  background: rgb(245, 238, 219);
+  display: flex;
+  margin-top: 150px;
 }
 
 .sidebar {
-    margin-right: 25px;
-    padding: 10px;
+  margin-right: 25px;
+  padding: 10px;
 }
 
 .sidebar-img {
-    width: 475px;
+  width: 475px;
 }
 
 .content {
-    flex: 1;
-    padding: 20px;
+  flex: 1;
+  padding: 20px;
 }
 
 /* interests section styles */
 #interests {
-    border: 4px rgb(255, 180, 0) ridge;
-    padding: 8px;
-    margin-top: 20px;
+  border: 4px rgb(255, 180, 0) ridge;
+  padding: 8px;
+  margin-top: 20px;
 }
 
-h2, h3 {
-    margin: 0px;
+h2,
+h3 {
+  margin: 0px;
 }
 /* Portfolio styles */
 .content h1 {
@@ -91,7 +94,7 @@ h2, h3 {
   padding: 10px;
   border-radius: 10px;
   margin-bottom: 10px;
-  color: White
+  color: White;
 }
 
 #portfolio li:hover {
