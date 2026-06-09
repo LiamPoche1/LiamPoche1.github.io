@@ -95,6 +95,7 @@ $(document).ready(function () {
     handleBad(currentshape, currentShape.repeat);
     var currentShape = dataShapes[currentIndex];
     repeat = currentShape.repeat;
+    handleBad(currentShape, repeat)
   }
 
   /////////////////////////////////////////////////
