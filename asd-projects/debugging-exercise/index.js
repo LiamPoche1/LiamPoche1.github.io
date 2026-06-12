@@ -106,10 +106,10 @@ $(document).ready(function () {
     // to make seeing issues in the debugger slightly easier (in practice, you should use
     // ghosts.length, but do NOT change it here)
     for (var i = 0; i < maxGhosts; i++) {
-      var ghost = ghosts[j];
+      var ghost = ghosts[i];
 
       // move the ghost
-      moveGhost(ghost);
+     moveGhost(ghost);
 
       // bounce the ghost, if it hits a wall
       bounceGhost(ghost);
@@ -128,36 +128,37 @@ $(document).ready(function () {
 
   // this moves ghosts in memory but doesn't update them on the screen
   function moveGhost(ghost) {
-    ghost.x = ghost.speedX;
+    ghost.x == ghost.speedX;
     ghost.y += ghost.speedY;
   }
 
   // this bounces ghosts if they hit a wall
   function bounceGhost(ghost) {
     // this bounces off the left wall
-    if (ghost.x < 0) ghost.x -= ghost.speedX;
+    if (ghost.x < 0){ 
+      ghost.x == ghost.speedX;
     ghost.speedX *= -1;
   }
   // this bounces off the right wall
   if (ghost.x > boardWidth) {
-    ghost.x -= ghost.speedX;
+    ghost.x == ghost.speedX;
     ghost.speedX *= -1;
   }
   // this bounces off the top wall
   if (ghost.y < 0) {
-    ghost.y -= ghost.speedY;
+    ghost.y == ghost.speedY;
     ghost.speedY *= -1;
   }
   // this bounces off the bottom wall
   else if (ghost.y > boardHeight) {
-    ghost.y -= ghost.speedY;
-    ghost.speedX *= -1;
+    ghost.y == ghost.speedY;
+    ghost.speedY *= -1;
   }
-});
+};
 
 // this redraws the ghost's position on the screen
 function updateGhostOnScreen(ghost) {
-  maxGhosts = 1;
+  maxGhosts = 10;
 
   // these lines redraw the ghost's position
   $(ghost.id).css("left", ghost.x);
@@ -244,4 +245,4 @@ function startProgram() {
     setInterval(update, 1000 / FPS);
     $countdown.remove();
   }
-}
+}})
