@@ -128,7 +128,7 @@ $(document).ready(function () {
 
   // this moves ghosts in memory but doesn't update them on the screen
   function moveGhost(ghost) {
-    ghost.x == ghost.speedX;
+    ghost.x += ghost.speedX;
     ghost.y += ghost.speedY;
   }
 
@@ -136,22 +136,22 @@ $(document).ready(function () {
   function bounceGhost(ghost) {
     // this bounces off the left wall
     if (ghost.x < 0){ 
-      ghost.x == ghost.speedX;
+      ghost.x -= ghost.speedX;
     ghost.speedX *= -1;
   }
   // this bounces off the right wall
   if (ghost.x > boardWidth) {
-    ghost.x == ghost.speedX;
+    ghost.x -= ghost.speedX;
     ghost.speedX *= -1;
   }
   // this bounces off the top wall
   if (ghost.y < 0) {
-    ghost.y == ghost.speedY;
+    ghost.y -= ghost.speedY;
     ghost.speedY *= -1;
   }
   // this bounces off the bottom wall
   else if (ghost.y > boardHeight) {
-    ghost.y == ghost.speedY;
+    ghost.y -= ghost.speedY;
     ghost.speedY *= -1;
   }
 };

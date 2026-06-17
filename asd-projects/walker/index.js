@@ -12,8 +12,19 @@ function runProgram(){
   var FRAMES_PER_SECOND_INTERVAL = 1000 / FRAME_RATE;
   
   // Game Item Objects
-
-
+const KEY = {
+  ENTER: 13,
+  LEFT: 37,
+  UP: 38,
+  RIGHT: 39,
+  DOWN: 40
+};
+var walker = {
+  x: 0,
+  y: 0,
+  speedX: 0,
+  speedY: 0
+}
   // one-time setup
   var interval = setInterval(newFrame, FRAMES_PER_SECOND_INTERVAL);   // execute newFrame every 0.0166 seconds (60 Frames per second)
 
@@ -23,7 +34,7 @@ function runProgram(){
 
   Note: You can have multiple event listeners for different types of events.
   */
-  $(document).on('eventType', handleEvent);                          
+  $(document).on("keydown", handleKeyDown);                          
 
   ////////////////////////////////////////////////////////////////////////////////
   ///////////////////////// CORE LOGIC ///////////////////////////////////////////
@@ -34,7 +45,7 @@ function runProgram(){
   by calling this function and executing the code inside.
   */
   function newFrame() {
-    
+    repositionGameItem();
 
   }
   
@@ -44,14 +55,26 @@ function runProgram(){
   
   Note: You can have multiple event handlers for different types of events.
   */
-  function handleEvent(event) {
-
-  }
+  function handleKeyDown(event) {
+ console.log(event.which)
+ if (event.which === KEY.LEFT){
+  console.log("left pressed");
+}if (event.which === KEY.UP){
+  console.log("up pressed");
+}if (event.which === KEY.RIGHT){
+  console.log("right pressed");
+}if (event.which === KEY.DOWN){
+  console.log("down pressed");
+}
+}
 
   ////////////////////////////////////////////////////////////////////////////////
   ////////////////////////// HELPER FUNCTIONS ////////////////////////////////////
   ////////////////////////////////////////////////////////////////////////////////
-
+function repositionGameItem(){
+  walker.push(walker.x + walker.speedX)
+  walker.push(walker.y + walker.speedY)
+}
   
   function endGame() {
     // stop the interval timer
@@ -60,5 +83,4 @@ function runProgram(){
     // turn off event handlers
     $(document).off();
   }
-  
 }
