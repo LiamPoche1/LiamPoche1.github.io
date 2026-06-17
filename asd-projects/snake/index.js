@@ -242,7 +242,7 @@ if (snake.body.length === 0) {
   snake.body.push(snakeSquare);
 snake.tail = snakeSquare;
 }
-
+}
 /* 
   event.which returns the keycode of the key that is pressed when the
   keydown event occurs
@@ -320,4 +320,4 @@ function calculateHighScore() {
   }
 
   return highScore;
-}}
+}

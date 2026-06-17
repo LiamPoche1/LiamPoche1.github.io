@@ -22,8 +22,8 @@ const KEY = {
 var walker = {
   x: 0,
   y: 0,
-  speedX: 0,
-  speedY: 0
+  speedX: 0,    
+  speedY: 0 
 }
   // one-time setup
   var interval = setInterval(newFrame, FRAMES_PER_SECOND_INTERVAL);   // execute newFrame every 0.0166 seconds (60 Frames per second)
@@ -72,10 +72,13 @@ var walker = {
   ////////////////////////// HELPER FUNCTIONS ////////////////////////////////////
   ////////////////////////////////////////////////////////////////////////////////
 function repositionGameItem(){
-  walker.push(walker.x + walker.speedX)
-  walker.push(walker.y + walker.speedY)
+  walker.x += walker.speedX
+  walker.y += walker.speedY
 }
-  
+function redrawGameItem(){
+  walker.css()
+}
+  console.log(walker.x, walker.y)
   function endGame() {
     // stop the interval timer
     clearInterval(interval);
