@@ -46,8 +46,8 @@ var walker = {
   */
   function newFrame() {
     repositionGameItem();
-
   }
+  
   
   /* 
   This section is where you set up the event handlers for user input.
