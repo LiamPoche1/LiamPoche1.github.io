@@ -334,7 +334,7 @@ function getRandomAvailablePosition() {
     randomPosition.row = Math.floor(Math.random() * ROWS);
     spaceIsAvailable = true;
 for(var i = 0; i < snake.body.length; i++){
-if(snake.body[i].row === randomPosition.column && snake.body[i].column === randomPosition.row){
+if(snake.body[i].row === randomPosition.row && snake.body[i].column === randomPosition.column){
   return false
 }
 }
